@@ -1,0 +1,20 @@
+taskkill /IM winvnc.exe /F /T
+
+cd "C:\Program Files\uvnc bvba\UltraVNC\"
+unins000.exe /SILENT
+powershell -command "Start-Sleep -s 4"
+cd "C:\Program Files (x86)\uvnc bvba\UltraVNC\"
+unins000.exe /SILENT
+powershell -command "Start-Sleep -s 4"
+cd "C:\Program Files\ultravnc\"
+unins000.exe /SILENT
+powershell -command "Start-Sleep -s 4"
+cd "C:\Program Files (x86)\ultravnc\"
+unins000.exe /SILENT
+
+del "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\UltraVNC Server.lnk"
+
+rmdir /s /q "C:\Program Files\uvnc bvba\UltraVNC\"
+rmdir /s /q "C:\Program Files (x86)\uvnc bvba\UltraVNC\"
+rmdir /s /q "C:\Program Files\ultravnc\"
+rmdir /s /q "C:\Program Files (x86)\ultravnc\"
